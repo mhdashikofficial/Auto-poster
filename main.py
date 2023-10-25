@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog
 import subprocess
 import os
+import shutil
 
 def add_caption_hashtags():
     caption = caption_entry.get()
@@ -30,6 +31,17 @@ def post_content():
     subprocess.call(["python", "twitter.py"])
     subprocess.call(["python", "telegram.py"])
     status_label.config(text="Posting complete!")
+
+    # Delete all files in the "post" directory after posting
+    folder_path = "post"
+    if os.path.exists(folder_path):
+        for filename in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, filename)
+            try:
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
+            except Exception as e:
+                print(e)
 
 # Create the main window
 root = tk.Tk()
