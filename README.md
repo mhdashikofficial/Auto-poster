@@ -55,6 +55,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-- Your Name
-
-Feel free to customize this README with specific details about your project, including installation, usage, examples, and any other relevant information. Add screenshots, badges, and links to social media accounts and websites as needed. A well-structured and informative README will help users understand your project and encourage contributions.
+- muhammed ashik 
